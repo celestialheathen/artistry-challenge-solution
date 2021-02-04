@@ -1,0 +1,14 @@
+<h1>Pleaese enter information for the new artist</h1>
+
+<%= form_for @artist do |f| %>
+    <%= f.label :name, "Enter name" %>
+    <%= f.text_field :name %><br>
+
+    <%= f.label :title, "Enter title" %>
+    <%= f.text_field :title %><br>
+
+    <%= f.label :age, "Enter age" %>
+    <%= f.number_field :age %><br>
+
+    <%= f.submit "Create a new artist" %>
+<% end %>

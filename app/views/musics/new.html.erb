@@ -1,0 +1,13 @@
+<h1>Please enter artist and instrument information below</h1>
+
+<%= form_for @music do |f| %>
+    <%= f.label :artist_id, "Pick an artist" %>
+    <%= f.collection_select :artist_id, Artist.all, :id, :name %><br>
+
+    <%= f.label :instrument_id, "Pick an instrument" %>
+    <%= f.collection_select :instrument_id, Instrument.all, :id, :name%><br>
+
+    <%= f.submit "Log new music" %>
+
+<% end %>
+
